@@ -28,6 +28,21 @@ Generate a slide plan before writing HTML.
 }
 ```
 
+## Content blocks
+
+Use a small controlled vocabulary for content block kinds. Formula blocks must reference `math-manifest.json` entries.
+
+```json
+{
+  "kind": "formula",
+  "math_id": "math-001",
+  "caption": "Optional caption",
+  "placement": "callout"
+}
+```
+
+Do not place renderer-specific KaTeX, MathJax, SVG, or PNG output directly in the slide plan.
+
 ## Slide Types
 
 Use a small controlled vocabulary:
@@ -52,4 +67,5 @@ Use a small controlled vocabulary:
 - Put dense evidence into structured tables, figure panels, formula boxes, or callouts.
 - Map every slide to a template layout role.
 - Preserve important numbers, terms, citations, and notation.
+- Preserve formulas through math manifest IDs when formulas are present.
 - Avoid vague placeholders such as `TBD` unless the user explicitly requests placeholders.
