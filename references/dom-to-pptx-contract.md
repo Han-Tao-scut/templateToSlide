@@ -26,6 +26,26 @@ Recommended base CSS:
 }
 ```
 
+## Math nodes
+
+Represent formulas as LaTeX-backed nodes that can be rendered consistently for HTML and PPTX:
+
+```html
+<span
+  class="math math-inline"
+  data-math-id="math-001"
+  data-math-type="inline"
+  data-latex="E = mc^2"></span>
+
+<div
+  class="math math-block"
+  data-math-id="math-002"
+  data-math-type="block"
+  data-latex="\int_0^1 x^2 dx = \frac{1}{3}"></div>
+```
+
+The HTML renderer may replace the node contents for preview, but the `data-math-id` and `data-latex` attributes must remain available before PPTX export. See `math-formula-pipeline.md`.
+
 ## Authoring Rules
 
 - Do not use a scaled stage as the export DOM. If a viewport preview uses `transform: scale(...)`, export the unscaled `1920 x 1080` DOM.
@@ -44,9 +64,9 @@ Recommended base CSS:
 
 - Text remains PowerPoint text where possible.
 - Background images remain images.
-- Color panels, rules, callout boxes, table cells, and formula boxes become editable shapes where possible.
+- Color panels, rules, callout boxes, and table cells become editable shapes where possible.
 - Tables may be exported as grouped text/shapes if true native PPT tables are not available.
-- Formulas may be text boxes unless the user explicitly requires PowerPoint equation objects.
+- Formulas default to SVG assets with original LaTeX preserved in metadata; native editable Office equation objects are an advanced optional path.
 
 ## Export Discipline
 
