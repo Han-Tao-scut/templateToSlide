@@ -1,0 +1,37 @@
+{
+  "deck_title": "Population Genomics Project Update",
+  "audience": "PI and lab members",
+  "purpose": "Summarize current analysis progress and next steps",
+  "language": "en-US",
+  "style_profile_id": "population-genomics-lab-2026",
+  "mode": "template-direct",
+  "slides": [
+    {
+      "index": 1,
+      "type": "cover",
+      "title": "Population Genomics Project Update",
+      "claim": "Current analysis supports a structured workflow from QC to demographic inference.",
+      "content_blocks": [
+        {"kind": "metadata", "items": ["Presenter", "Lab", "Date"]}
+      ],
+      "visual_intent": "Use the profile cover layout with restrained scientific branding.",
+      "template_layout": "cover",
+      "required_assets": [],
+      "notes": "Preserve institutional logo if present in the profile."
+    },
+    {
+      "index": 2,
+      "type": "content",
+      "title": "Study design connects sampling geography to variant-level inference",
+      "claim": "The dataset is organized by population, region, and sequencing depth.",
+      "content_blocks": [
+        {"kind": "table", "title": "Cohort summary", "columns": ["Population", "Region", "N", "Depth"], "rows": []},
+        {"kind": "callout", "text": "Use consistent population labels across all downstream plots."}
+      ],
+      "visual_intent": "Dense two-column content slide with table and callout.",
+      "template_layout": "content",
+      "required_assets": [],
+      "notes": ""
+    }
+  ]
+}

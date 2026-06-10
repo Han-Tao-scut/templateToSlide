@@ -1,0 +1,4 @@
+interface:
+  display_name: "Template to Slide"
+  short_description: "Extract PPT styles and generate editable PPTX decks"
+  default_prompt: "Use $template-to-slide to extract a reusable style profile from my PPT template, then generate an editable PPTX from my outline and content."
