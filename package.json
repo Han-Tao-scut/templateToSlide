@@ -5,7 +5,6 @@
   "scripts": {
     "check": "python3 scripts/check_dependencies.py --cwd . --json",
     "check:strict": "python3 scripts/check_dependencies.py --cwd . --strict --json",
-    "setup": "python3 scripts/setup_environment.py --cwd .",
     "export": "node scripts/export_dom_to_pptx.mjs",
     "validate": "python3 scripts/validate_pptx.py"
   },
